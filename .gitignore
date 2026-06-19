@@ -46,10 +46,4 @@ docs/
 po/*~
 
 # RStudio Connect folder
-rsconnect/
-/R Code/.Rproj.user
-R Code/.Rproj.user/8C647B01/sources/session-73639fbf/4D1C442B
-*.pper
-R Code/.Rproj.user/8C647B01/sources/prop/241242C4
-/R Code/.Rproj.user
-*.pper
+
