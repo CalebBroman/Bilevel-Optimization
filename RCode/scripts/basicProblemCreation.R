@@ -10,7 +10,6 @@ lowerProblemSolution <- function(x) {
   map_dbl(x, \(x) optimize(lowerProblem, c(-10000,1+x), x=x)[[1]])
 }
 
-
 #upper level function:
 
 upperProblem <- function(x) {
