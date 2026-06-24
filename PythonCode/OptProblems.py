@@ -1,4 +1,5 @@
 import cvxpy as cp
+import cvxpylayers as cplay
 import numpy as np
 
 x = cp.Variable()
