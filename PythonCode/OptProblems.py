@@ -1,6 +1,7 @@
 import cvxpy as cp
 import cvxpylayers as cplay
 import numpy as np
+import plotly
 
 x = cp.Variable()
 z = cp.Variable()
