@@ -4,7 +4,7 @@ import numpy as np
 x1 = cp.Variable()
 x2 = cp.Variable()
 
-obj = cp.Minimize(cp.norm2(1, x1) + (1/2) * x2 ** 2)
+obj = cp.Minimize(cp.norm2(cp.hstack([1, x1+2])) + (1/2) * (x2 - 4) ** 2)
 
 prob = cp.Problem(obj)
 prob.solve()
