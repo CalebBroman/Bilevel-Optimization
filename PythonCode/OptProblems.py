@@ -3,15 +3,14 @@ import cvxpylayers as cplay
 import numpy as np
 import plotly
 
-x = cp.Variable()
-z = cp.Variable()
+x = cp.Parameter()
+z1 = cp.Variable()
+z2 = cp.Variable()
 
-constraints = []
+lowObj = cp.Minimize((z1 + x)^2 + (x-2)*z1*z2 + z2^2)
 
-obj = cp.Minimize()
-
-prob = cp.Problem(obj, constraints)
-prob.solve()
+lowProb = cp.Problem(obj, constraints)
+lowProb.solve()
 
 prob.status
 prob.value
