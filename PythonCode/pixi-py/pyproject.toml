@@ -1,0 +1,26 @@
+[project]
+authors = [{name = "Caleb Broman", email = "caleb.broman@gmail.com"}]
+dependencies = []
+name = "pixi-py"
+requires-python = ">= 3.11"
+version = "0.1.0"
+
+[build-system]
+build-backend = "hatchling.build"
+requires = ["hatchling"]
+
+[tool.pixi.workspace]
+channels = ["conda-forge"]
+platforms = ["osx-arm64"]
+
+[tool.pixi.pypi-dependencies]
+pixi_py = { path = ".", editable = true }
+
+[tool.pixi.tasks]
+
+[tool.pixi.dependencies]
+numpy = ">=2.5.1,<3"
+matplotlib = ">=3.11.0,<4"
+cvxpy = ">=1.9.2,<2"
+plotnine = ">=0.15.7,<0.16"
+plotly = ">=6.9.0,<7"
