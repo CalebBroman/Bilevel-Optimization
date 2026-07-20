@@ -118,6 +118,9 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/zlib-ng-2.3.3-hed4e4f5_1.conda
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/zstd-1.5.7-hbf9d68e_6.conda
       - pypi: ./
+      - pypi: https://files.pythonhosted.org/packages/05/51/df1e73dc4ba7ce48fb6942f2fb4bcb18f714f49034ddd0dfdbeec3d84e52/cvxpylayers-1.2.0-py3-none-any.whl
+      - pypi: https://files.pythonhosted.org/packages/32/d5/f9a850d79b0851d1d4ef6456097579a9005b31fea68726a4ae5f2d82ddd9/threadpoolctl-3.6.0-py3-none-any.whl
+      - pypi: https://files.pythonhosted.org/packages/bc/30/348599fbc2a3e64b412a026cd1464d0f9feb3ec3a3558cdcb72da54c891f/diffcp-1.1.9.tar.gz
 packages:
 - conda: https://conda.anaconda.org/conda-forge/noarch/ca-certificates-2026.6.17-hbd8a1cb_0.conda
   sha256: f8e3c730fa14ee3f170493779f06522c4acf89169f43db4f039727709b6419cf
@@ -1735,3 +1738,50 @@ packages:
 - pypi: ./
   name: pixi-py
   requires_python: '>=3.11'
+- pypi: https://files.pythonhosted.org/packages/05/51/df1e73dc4ba7ce48fb6942f2fb4bcb18f714f49034ddd0dfdbeec3d84e52/cvxpylayers-1.2.0-py3-none-any.whl
+  name: cvxpylayers
+  version: 1.2.0
+  sha256: 6c077be172c0c956fea278f56b65508f553a766bed9636630e88cbeb8a7f20ac
+  requires_dist:
+  - cvxpy>=1.9.0
+  - diffcp>=1.1.0
+  - numpy>=1.22.4
+  - scipy>=1.13.0
+  - diffqcp>=0.4.4 ; extra == 'all'
+  - jax>=0.4.0 ; extra == 'all'
+  - jaxlib>=0.4.0 ; extra == 'all'
+  - mlx-metal>=0.27.1 ; extra == 'all'
+  - mlx>=0.27.1 ; extra == 'all'
+  - moreau>=0.3.0 ; extra == 'all'
+  - torch>=2.0.0 ; extra == 'all'
+  - jax>=0.4.0 ; extra == 'jax'
+  - jaxlib>=0.4.0 ; extra == 'jax'
+  - mlx-metal>=0.27.1 ; extra == 'metal'
+  - mlx>=0.27.1 ; extra == 'mlx'
+  - moreau>=0.3.0 ; extra == 'moreau'
+  - diffcp>=1.1.0 ; extra == 'torch'
+  - torch>=2.0.0 ; extra == 'torch'
+  requires_python: '>=3.11'
+- pypi: https://files.pythonhosted.org/packages/32/d5/f9a850d79b0851d1d4ef6456097579a9005b31fea68726a4ae5f2d82ddd9/threadpoolctl-3.6.0-py3-none-any.whl
+  name: threadpoolctl
+  version: 3.6.0
+  sha256: 43a0b8fd5a2928500110039e43a5eed8480b918967083ea48dc3ab9f13c4a7fb
+  requires_python: '>=3.9'
+- pypi: https://files.pythonhosted.org/packages/bc/30/348599fbc2a3e64b412a026cd1464d0f9feb3ec3a3558cdcb72da54c891f/diffcp-1.1.9.tar.gz
+  name: diffcp
+  version: 1.1.9
+  sha256: 10016ef0aa221d3d7875210179dffb3dd6010ebd2328efab582e84178b539e2b
+  requires_dist:
+  - numpy>=2.0
+  - scipy>=1.10
+  - scs>=3.0.0
+  - threadpoolctl>=1.1
+  - cvxpy>=1.6.3 ; extra == 'cvxpy'
+  - clarabel>=0.5.1 ; extra == 'clarabel'
+  - ecos>=2.0.10 ; extra == 'ecos'
+  - clarabel>=0.5.1 ; extra == 'test'
+  - cvxpy>=1.6.3 ; extra == 'test'
+  - scs>=3.0.0 ; extra == 'test'
+  - pytest>=8.3.5 ; extra == 'test'
+  - ecos>=2.0.10 ; extra == 'test'
+  requires_python: '>=3.10'
